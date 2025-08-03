@@ -196,4 +196,8 @@ This project is open source and available under the [MIT License](LICENSE).
 
 **Last Updated**: December 2024  
 **Version**: 1.0.0  
+<<<<<<< HEAD
 **Status**: Active Development 
+=======
+**Status**: Active Development 
+>>>>>>> d7d56a5327bd6305213be340c5f2ca65030ecc3c
