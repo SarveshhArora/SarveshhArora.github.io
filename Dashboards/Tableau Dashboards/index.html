@@ -259,6 +259,41 @@
             font-weight: bold;
         }
 
+        /* Tableau Features Alert */
+        .tableau-features {
+            background: rgba(14, 165, 233, 0.1);
+            border: 1px solid rgba(14, 165, 233, 0.2);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tableau-features h6 {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .tableau-features ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .tableau-features li {
+            color: var(--gray-300);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            white-space: nowrap;
+        }
+
+        .tableau-features li::before {
+            content: '✓';
+            color: var(--primary);
+            font-weight: bold;
+        }
+
         /* Embedded Dashboard */
         .embedded-dashboard {
             background: var(--glass);
@@ -369,25 +404,56 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <ul class="feature-list">
-                                                <li>Sales performance metrics</li>
-                                                <li>Customer segmentation analysis</li>
+                                                <li>Sales & Profit KPIs</li>
+                                                <li>Year-over-Year Comparisons</li>
+                                                <li>Customer Distribution Analysis</li>
                                             </ul>
                                         </div>
                                         <div class="col-md-6">
                                             <ul class="feature-list">
-                                                <li>Geographic sales distribution</li>
-                                                <li>Product performance tracking</li>
+                                                <li>Sub-Category Performance</li>
+                                                <li>Top Customer Rankings</li>
+                                                <li>Monthly Trend Analysis</li>
                                             </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Tableau Features Section -->
+                                <div class="tableau-features">
+                                    <div class="d-flex align-items-start">
+                                        <i class="fas fa-star fa-lg me-3 mt-1" style="color: var(--primary);"></i>
+                                        <div>
+                                            <h6>Tableau Features Used:</h6>
+                                            <div class="row">
+                                                <div class="col-md-7">
+                                                    <ul>
+                                                        <li>Data Blending & Joins</li>
+                                                        <li>Calculated Fields & Parameters</li>
+                                                        <li>Advanced Chart Types</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <ul>
+                                                        <li>Filters & Actions</li>
+                                                        <li>Dashboard Layout & Design</li>
+                                                        <li>Story Points & Navigation</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             
                             <div class="col-lg-4">
-                                <div class="d-grid">
+                                <div class="d-grid gap-2">
                                     <button class="btn btn-primary" onclick="toggleEmbed('sales-dashboard')">
-                                        <i class="fas fa-eye me-2"></i>View Embedded
+                                        <i class="fas fa-eye me-2"></i>View Dashboard
                                     </button>
+                                    <a href="https://public.tableau.com/app/profile/sarveshh.arora/viz/SalesDashboard_17385238987550/CustomerDashboard" class="btn btn-outline" target="_blank">
+                                        <i class="fas fa-external-link-alt me-2"></i>View on Tableau Public
+                                    </a>
                                 </div>
                             </div>
                         </div>

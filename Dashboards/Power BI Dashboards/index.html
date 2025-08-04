@@ -259,6 +259,41 @@
             font-weight: bold;
         }
 
+        /* Power BI Features Alert */
+        .powerbi-features {
+            background: rgba(14, 165, 233, 0.1);
+            border: 1px solid rgba(14, 165, 233, 0.2);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .powerbi-features h6 {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .powerbi-features ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .powerbi-features li {
+            color: var(--gray-300);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            white-space: nowrap;
+        }
+
+        .powerbi-features li::before {
+            content: '✓';
+            color: var(--primary);
+            font-weight: bold;
+        }
+
         /* Embedded Dashboard */
         .embedded-dashboard {
             background: var(--glass);
@@ -389,21 +424,47 @@
                         <div class="row">
                             <div class="col-lg-8">
                                 <div class="dashboard-description">
-                                    <p>This dashboard provides comprehensive customer performance analytics and insights. Key metrics and features include:</p>
+                                    <p>This dashboard provides comprehensive sales and customer analytics with interactive visualizations. Key metrics and features include:</p>
                                     <div class="row">
                                         <div class="col-md-6">
                                             <ul class="feature-list">
-                                                <li>Customer Lifetime Value (CLV)</li>
-                                                <li>Customer Retention Rate</li>
-                                                <li>Purchase Frequency</li>
+                                                <li>Sales Performance Metrics</li>
+                                                <li>Customer Demographics</li>
+                                                <li>Customer Segmentation</li>
                                             </ul>
                                         </div>
                                         <div class="col-md-6">
                                             <ul class="feature-list">
-                                                <li>Revenue per Customer</li>
-                                                <li>Customer Segmentation</li>
-                                                <li>Churn Rate Analysis</li>
+                                                <li>Geographic Distribution</li>
+                                                <li>Revenue Analysis</li>
+                                                <li>Gender Demographics</li>
                                             </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Power BI Features Section -->
+                                <div class="powerbi-features">
+                                    <div class="d-flex align-items-start">
+                                        <i class="fas fa-star fa-lg me-3 mt-1" style="color: var(--primary);"></i>
+                                        <div>
+                                            <h6>Power BI Features Used:</h6>
+                                            <div class="row">
+                                                <div class="col-md-7">
+                                                    <ul>
+                                                        <li>Data Modeling & Relationships</li>
+                                                        <li>DAX Formulas & Measures</li>
+                                                        <li>Advanced Visualizations</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <ul>
+                                                        <li>Power Query (M Language)</li>
+                                                        <li>Custom Themes & Formatting</li>
+                                                        <li>Navigation</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -412,7 +473,7 @@
                             <div class="col-lg-4">
                                 <div class="d-grid">
                                     <button class="btn btn-primary" onclick="toggleEmbed('customer-dashboard')">
-                                        <i class="fas fa-eye me-2"></i>View Embedded
+                                        <i class="fas fa-eye me-2"></i>View Dashboard
                                     </button>
                                 </div>
                             </div>
