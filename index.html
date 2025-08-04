@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Analyst Portfolio - Analytics & Insights</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <style>
         :root {
             --primary: #0ea5e9;
@@ -128,7 +131,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: 
+            background:
                 radial-gradient(circle at 20% 80%, rgba(14, 165, 233, 0.1) 0%, transparent 50%),
                 radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
         }
@@ -482,29 +485,29 @@
             align-items: center;
         }
 
-                 .about-image {
-             width: 90%;
-             height: 525px;
-             border-radius: 16px;
-             position: relative;
-             overflow: hidden;
-             background: linear-gradient(135deg, var(--primary), var(--secondary));
-         }
+        .about-image {
+            width: 90%;
+            height: 525px;
+            border-radius: 16px;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+        }
 
-         .profile-image {
-             width: 100%;
-             height: 100%;
-             object-fit: cover;
-             object-position: top;
-             border-radius: 16px;
-             transition: all 0.3s ease;
-         }
+        .profile-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            border-radius: 16px;
+            transition: all 0.3s ease;
+        }
 
-         .about-image:hover .profile-image {
-             transform: scale(1.05);
-         }
+        .about-image:hover .profile-image {
+            transform: scale(1.05);
+        }
 
-                 /* Removed grid pattern from about-image to show clean profile image */
+        /* Removed grid pattern from about-image to show clean profile image */
 
         .about-text h2 {
             font-size: 2.5rem;
@@ -607,6 +610,30 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
 
+        .timeline-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--white);
+            flex-shrink: 0;
+        }
+
+        .timeline-title-info {
+            flex: 1;
+        }
+
         .timeline-content h4 {
             color: var(--white);
             font-size: 1.3rem;
@@ -650,6 +677,10 @@
             color: var(--primary);
             font-weight: bold;
             margin-top: 0.1rem;
+        }
+
+        .timeline .timeline-description li {
+            padding-left: 4rem;
         }
 
         /* Certificates & Awards Section */
@@ -838,16 +869,20 @@
             .hero h1 {
                 font-size: 3rem;
             }
+
             .about-content {
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
+
             .skills-container {
                 grid-template-columns: 1fr;
             }
+
             .portfolio-grid {
                 grid-template-columns: 1fr;
             }
+
             .stats-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -859,6 +894,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -881,7 +917,9 @@
         }
 
         @keyframes spin {
-            to { transform: rotate(360deg); }
+            to {
+                transform: rotate(360deg);
+            }
         }
 
         /* Alert Messages */
@@ -911,6 +949,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg">
@@ -927,15 +966,16 @@
                         <a class="nav-link" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#skills">Skills</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#portfolio">Portfolio</a>
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
                 </ul>
@@ -949,7 +989,9 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 hero-content fade-in-up">
                     <h1>Hi! I'm <span class="highlight">Sarveshh Arora</span><br>Data Analyst</h1>
-                    <p>Passionate data analyst with expertise in Tableau, Power BI, and Excel. Transforming complex datasets into actionable insights through compelling visualizations that drive business decisions.</p>
+                    <p>Passionate data analyst with expertise in Tableau, Power BI, and Excel. Transforming complex
+                        datasets into actionable insights through compelling visualizations that drive business
+                        decisions.</p>
                     <div class="hero-buttons">
                         <a href="#portfolio" class="btn btn-primary">
                             <i class="fas fa-rocket me-2"></i>View Projects
@@ -961,7 +1003,8 @@
                 </div>
                 <div class="col-lg-6 text-center">
                     <div class="hero-visual">
-                        <i class="fas fa-chart-network" style="font-size: 12rem; color: var(--primary); opacity: 0.1;"></i>
+                        <i class="fas fa-chart-network"
+                            style="font-size: 12rem; color: var(--primary); opacity: 0.1;"></i>
                     </div>
                 </div>
             </div>
@@ -992,12 +1035,51 @@
         </div>
     </section>
 
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-user me-3"></i>About Me</h2>
+            <p class="section-subtitle">Passionate data analyst transforming complex data into actionable insights</p>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="Sarveshh_Arora-Image.JPG" alt="Sarveshh Arora - Data Analyst" class="profile-image"
+                        onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-user-tie\' style=\'font-size: 5rem; color: var(--white); display: flex; align-items: center; justify-content: center; height: 100%;\'></i>'">
+                </div>
+                <div class="about-text">
+                    <p>Data Analyst with 3+ years of experience specializing in <strong>Tableau</strong>, <strong>Power
+                            BI</strong>, <strong>Excel</strong>, <strong>SQL</strong>, and <strong>Python</strong>.
+                        Expert in transforming complex data into actionable insights through advanced <strong>data
+                            visualization</strong>, <strong>business intelligence</strong>, and <strong>stakeholder
+                            management</strong>. Proven track record in optimizing data migration workflows and
+                        delivering impactful analytics solutions for enterprise clients.</p>
+                    <div class="about-stats">
+                        <div class="about-stat"><i class="fas fa-check-circle"></i><span>Tableau & Power BI
+                                Dashboards</span></div>
+                        <div class="about-stat"><i class="fas fa-check-circle"></i><span>Advanced Excel Analytics</span>
+                        </div>
+                        <div class="about-stat"><i class="fas fa-check-circle"></i><span>SQL & Python Automation</span>
+                        </div>
+                        <div class="about-stat"><i class="fas fa-check-circle"></i><span>Business Intelligence</span>
+                        </div>
+                        <div class="about-stat"><i class="fas fa-check-circle"></i><span>Stakeholder Management</span>
+                        </div>
+                        <div class="about-stat"><i class="fas fa-check-circle"></i><span>Data Migration &
+                                Integration</span></div>
+                    </div>
+                    <a href="assets/Sarveshh_Arora_Resume.pdf" class="btn btn-primary" target="_blank" download>
+                        <i class="fas fa-download me-2"></i>Download Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Skills Section -->
     <section id="skills" class="skills-section">
         <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
+            <h2 class="section-title"><i class="fas fa-code me-3"></i>Technical Skills</h2>
             <p class="section-subtitle">Comprehensive expertise in data analytics and visualization tools</p>
-            
+
             <div class="skills-container">
                 <div class="skill-category">
                     <h3>
@@ -1011,7 +1093,7 @@
                         <li>MS Powerpoint</li>
                     </ul>
                 </div>
-                
+
                 <div class="skill-category">
                     <h3>
                         <i class="fas fa-database"></i>
@@ -1024,7 +1106,7 @@
                         <li>Google Cloud Platform(GCP)</li>
                     </ul>
                 </div>
-                
+
                 <div class="skill-category">
                     <h3>
                         <i class="fab fa-python"></i>
@@ -1044,9 +1126,9 @@
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio-section">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
+            <h2 class="section-title"><i class="fas fa-rocket me-3"></i>Featured Projects</h2>
             <p class="section-subtitle">Showcasing innovative data solutions and business intelligence</p>
-            
+
             <div class="filter-buttons">
                 <button class="filter-btn active" data-filter="all">All Projects</button>
                 <button class="filter-btn" data-filter="tableau">Tableau</button>
@@ -1062,7 +1144,9 @@
                             <i class="fas fa-chart-bar"></i>
                         </div>
                         <h5 class="project-title">Sales & Customer Dashboard</h5>
-                        <p class="project-description">Comprehensive sales performance and customer analytics dashboard with Sales & Profit KPIs, Year-over-Year Comparisons, Customer Distribution Analysis, Sub-Category Performance, Top Customer Rankings, and Monthly Trend Analysis.</p>
+                        <p class="project-description">Comprehensive sales performance and customer analytics dashboard
+                            with Sales & Profit KPIs, Year-over-Year Comparisons, Customer Distribution Analysis,
+                            Sub-Category Performance, Top Customer Rankings, and Monthly Trend Analysis.</p>
                         <div class="project-tools">
                             <span class="tool-badge">Tableau</span>
                             <span class="tool-badge">SQL</span>
@@ -1087,7 +1171,9 @@
                             <i class="fas fa-chart-line"></i>
                         </div>
                         <h5 class="project-title">Customer Performance Dashboard</h5>
-                        <p class="project-description">Customer analytics and performance insights dashboard with Sales Performance Metrics, Customer Demographics, Customer Segmentation, Geographic Distribution, Revenue Analysis, and Gender Demographics.</p>
+                        <p class="project-description">Customer analytics and performance insights dashboard with Sales
+                            Performance Metrics, Customer Demographics, Customer Segmentation, Geographic Distribution,
+                            Revenue Analysis, and Gender Demographics.</p>
                         <div class="project-tools">
                             <span class="tool-badge">Power BI</span>
                             <span class="tool-badge">DAX</span>
@@ -1110,7 +1196,9 @@
                             <i class="fas fa-table"></i>
                         </div>
                         <h5 class="project-title">SLA Dashboard</h5>
-                        <p class="project-description">Service Level Agreement monitoring and analytics dashboard with Real-time SLA compliance tracking, Performance metrics and KPIs, Response time analysis, and Trend analysis.</p>
+                        <p class="project-description">Service Level Agreement monitoring and analytics dashboard with
+                            Real-time SLA compliance tracking, Performance metrics and KPIs, Response time analysis, and
+                            Trend analysis.</p>
                         <div class="project-tools">
                             <span class="tool-badge">Excel</span>
                             <span class="tool-badge">LookUps</span>
@@ -1130,52 +1218,85 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="Sarveshh_Arora-Image.JPG" alt="Sarveshh Arora - Data Analyst" class="profile-image" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-user-tie\' style=\'font-size: 5rem; color: var(--white); display: flex; align-items: center; justify-content: center; height: 100%;\'></i>'">
-                </div>
-                <div class="about-text">
-                    <h2>About Me</h2>
-                    <p>Data Analyst with 3+ years of experience specializing in <strong>Tableau</strong>, <strong>Power BI</strong>, <strong>Excel</strong>, <strong>SQL</strong>, and <strong>Python</strong>. Expert in transforming complex data into actionable insights through advanced <strong>data visualization</strong>, <strong>business intelligence</strong>, and <strong>stakeholder management</strong>. Proven track record in optimizing data migration workflows and delivering impactful analytics solutions for enterprise clients.</p>
-                    <div class="about-stats">
-                        <div class="about-stat"><i class="fas fa-check-circle"></i><span>Tableau & Power BI Dashboards</span></div>
-                        <div class="about-stat"><i class="fas fa-check-circle"></i><span>Advanced Excel Analytics</span></div>
-                        <div class="about-stat"><i class="fas fa-check-circle"></i><span>SQL & Python Automation</span></div>
-                        <div class="about-stat"><i class="fas fa-check-circle"></i><span>Business Intelligence</span></div>
-                        <div class="about-stat"><i class="fas fa-check-circle"></i><span>Stakeholder Management</span></div>
-                        <div class="about-stat"><i class="fas fa-check-circle"></i><span>Data Migration & Integration</span></div>
-                    </div>
-                    <a href="assets/Sarveshh_Arora_Resume.pdf" class="btn btn-primary" target="_blank" download>
-                        <i class="fas fa-download me-2"></i>Download Resume
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Work Experience Section -->
     <section id="experience" class="experience-section">
         <div class="container">
-            <h2 class="section-title">Work Experience</h2>
+            <h2 class="section-title"><i class="fas fa-briefcase me-3"></i>Work Experience</h2>
+            <p class="section-subtitle">Professional journey and key achievements in data analytics</p>
             <div class="timeline-container">
                 <div class="timeline">
                     <div class="timeline-item">
-                        <div class="timeline-marker"></div>
+                    <div class="timeline-marker"></div>
                         <div class="timeline-content">
-                            <h4>Data Analyst</h4>
-                            <p class="timeline-company">Tata Technologies, Pune, India</p>
-                            <p class="timeline-period">August 2022 - Present</p>
+                            <div class="timeline-header">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-briefcase"></i>
+                                </div>
+                                <div class="timeline-title-info">
+                                    <h4>Sr. Data Analyst</h4>
+                                    <p class="timeline-company">Tata Technologies, Pune, India</p>
+                                    <p class="timeline-period">August 2022 - Present</p>
+                                </div>
+                            </div>
                             <ul class="timeline-description">
-                                <li>Led the development of interactive dashboards and data solutions for major clients such as Jaguar Land Rover (JLR) and BMW TechWorks India (BTI).</li>
-                                <li>Achieved a 15% increase in efficiency for JLR and a 30% reduction in reporting time for recruitment team reporting to BTI.</li>
-                                <li>Integrated multiple data sources and optimized data migration workflows.</li>
-                                <li>Collaborated with cross-functional teams to deliver actionable insights that drive strategic decision-making.</li>
+                                <li>Led the development of interactive dashboards and data solutions for major clients
+                                    such as Jaguar Land Rover (JLR) and BMW TechWorks India (BTI)</li>
+                                <li>Achieved a 15% increase in efficiency for JLR and a 30% reduction in reporting time
+                                    for recruitment team reporting to BTI</li>
+                                <li>Integrated multiple data sources and optimized data migration workflows</li>
+                                <li>Collaborated with cross-functional teams to deliver actionable insights that drive
+                                    strategic decision-making</li>
                             </ul>
                         </div>
+                        
                     </div>
+                    <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-briefcase"></i>
+                                </div>
+                                <div class="timeline-title-info">
+                                    <h4>AEM Developer</h4>
+                                    <p class="timeline-company">To The New, Noida, India</p>
+                                    <p class="timeline-period">February 2022 - April 2022</p>
+                                </div>
+                            </div>
+                            <ul class="timeline-description">
+                                <li>IUtilizes AEM architecture to design and build components, templates, dialogs,
+                                    and workflows, demonstrating proficiency in web development and user
+                                    experience design</li>
+                                <li>Proficient in HTML, CSS, and JavaScript, with experience in using these languages
+                                    to create user interfaces and web applications</li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <div class="timeline-icon">
+                                        <i class="fas fa-briefcase"></i>
+                                    </div>
+                                    <div class="timeline-title-info">
+                                        <h4>Web Developer Intern</h4>
+                                        <p class="timeline-company">NetLeaf Info Software, Gurugram, India</p>
+                                        <p class="timeline-period">July 2019 - July 2019</p>
+                                    </div>
+                                </div>
+                                <ul class="timeline-description">
+                                    <li>Directly involved in all aspects of website design, development, and
+                                        maintenance, from initial concept to final deployment</li>
+                                    <li>Developed web applications using PHP and CSS, demonstrating proficiency in
+                                        back-end and front-end web development</li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                    
+                    
                 </div>
             </div>
         </div>
@@ -1184,29 +1305,49 @@
     <!-- Education Section -->
     <section id="education" class="experience-section">
         <div class="container">
-            <h2 class="section-title">Education</h2>
+            <h2 class="section-title"><i class="fas fa-graduation-cap me-3"></i>Education</h2>
+            <p class="section-subtitle">Academic background and continuous learning journey</p>
             <div class="timeline-container">
                 <div class="timeline">
                     <div class="timeline-item">
                         <div class="timeline-marker"></div>
                         <div class="timeline-content">
-                            <h4>Professional Certificate Program - Generative AI & Machine Learning</h4>
-                            <p class="timeline-company">Indian Institute of Technology (IIT) Guwahati</p>
-                            <p class="timeline-period">2025 - 2026</p>
+                            <div class="timeline-header">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <div class="timeline-title-info">
+                                    <h4>Professional Certificate Program - Generative AI & Machine Learning</h4>
+                                    <p class="timeline-company">Indian Institute of Technology (IIT) Guwahati</p>
+                                    <p class="timeline-period">July 2025 - Present</p>
+                                </div>
+                            </div>
                             <ul class="timeline-description">
-                                <li>Advanced program focusing on cutting-edge AI technologies including deep learning, neural networks, and machine learning algorithms</li>
-                                <li>Specialized in generative models, natural language processing, and computer vision applications</li>
+                                <li>Advanced program focusing on cutting-edge AI technologies including deep learning,
+                                    neural networks, and machine learning algorithms</li>
+                                <li>Specialized in generative models, natural language processing, and computer vision
+                                    applications</li>
                             </ul>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-marker"></div>
                         <div class="timeline-content">
-                            <h4>Bachelor of Technology - Computer Science & Engineering</h4>
-                            <p class="timeline-company">Manav Rachna International Institute of Research and Studies (MRIIRS)</p>
-                            <p class="timeline-period">2018 - 2022</p>
+                            <div class="timeline-header">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <div class="timeline-title-info">
+                                    <h4>Bachelor of Technology - Computer Science & Engineering</h4>
+                                    <p class="timeline-company">Manav Rachna International Institute of Research and
+                                        Studies (MRIIRS)</p>
+                                    <p class="timeline-period">August 2018 - July 2022</p>
+                                </div>
+                            </div>
                             <ul class="timeline-description">
-                                <li>Comprehensive program covering core computer science fundamentals including data structures, algorithms, database management systems, software engineering, and web technologies</li>
+                                <li>Comprehensive program covering core computer science fundamentals including data
+                                    structures, algorithms, database management systems, software engineering, and web
+                                    technologies</li>
                                 <li>Completed projects in data analysis and software development</li>
                             </ul>
                         </div>
@@ -1219,36 +1360,46 @@
     <!-- Certifications Section -->
     <section id="certifications" class="certificates-section">
         <div class="container">
-            <h2 class="section-title">Certifications</h2>
+            <h2 class="section-title"><i class="fas fa-certificate me-3"></i>Certifications</h2>
+            <p class="section-subtitle">Professional credentials and industry-recognized qualifications</p>
             <div class="certificates-grid">
                 <div class="certificate-category">
                     <div class="certificate-list">
                         <div class="certificate-item">
                             <div class="certificate-badge">
-                                <img src="mckinsey-org-forward-program.png" alt="McKinsey Forward Badge" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                                <div class="certificate-icon" style="display: none;"><i class="fas fa-building"></i></div>
+                                <img src="mckinsey-org-forward-program.png" alt="McKinsey Forward Badge"
+                                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="certificate-icon" style="display: none;"><i class="fas fa-building"></i>
+                                </div>
                             </div>
                             <div class="certificate-content">
                                 <h4>McKinsey Forward Learner Program</h4>
                                 <p class="timeline-company">McKinsey & Company</p>
                                 <p class="timeline-period">July 2025</p>
                                 <ul class="timeline-description">
-                                    <li>Completed comprehensive professional development program focused on essential workplace skills, digital fluency, and leadership capabilities for the future of work</li>
-                                    <li>Developed expertise in digital transformation strategies and modern workplace collaboration tools</li>
+                                    <li>Completed comprehensive professional development program focused on essential
+                                        workplace skills, digital fluency, and leadership capabilities for the future of
+                                        work</li>
+                                    <li>Developed expertise in digital transformation strategies and modern workplace
+                                        collaboration tools</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="certificate-item">
                             <div class="certificate-badge">
-                                <img src="google-data-analytics-professional-certificate.png" alt="Google Analytics Badge" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                                <div class="certificate-icon" style="display: none;"><i class="fas fa-chart-bar"></i></div>
+                                <img src="google-data-analytics-professional-certificate.png"
+                                    alt="Google Analytics Badge"
+                                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="certificate-icon" style="display: none;"><i class="fas fa-chart-bar"></i>
+                                </div>
                             </div>
                             <div class="certificate-content">
                                 <h4>Professional Certificate - Google Data Analytics</h4>
                                 <p class="timeline-company">Grow with Google & Coursera</p>
                                 <p class="timeline-period">February 2024</p>
                                 <ul class="timeline-description">
-                                    <li>Completed hands-on projects in R programming, SQL, data wrangling, data cleaning, and dashboard creation using Tableau</li>
+                                    <li>Completed hands-on projects in R programming, SQL, data wrangling, data
+                                        cleaning, and dashboard creation using Tableau</li>
                                     <li>Completed hands-on projects simulating real-world business data scenarios</li>
                                 </ul>
                             </div>
@@ -1262,7 +1413,8 @@
     <!-- Awards Section -->
     <section id="awards" class="certificates-section">
         <div class="container">
-            <h2 class="section-title">Awards</h2>
+            <h2 class="section-title"><i class="fas fa-trophy me-3"></i>Awards</h2>
+            <p class="section-subtitle">Recognition and achievements in professional excellence</p>
             <div class="certificates-grid">
                 <div class="certificate-category">
                     <div class="certificate-list">
@@ -1273,8 +1425,10 @@
                                 <p class="timeline-company">Tata Technologies</p>
                                 <p class="timeline-period">January 2025</p>
                                 <ul class="timeline-description">
-                                    <li>Recognized as Champion of the Month for automating reporting workflows, achieving 40% effort reduction</li>
-                                    <li>Mentored Graduate Engineer Trainees (GETs), contributing to skill development and project resource allocation</li>
+                                    <li>Recognized as Champion of the Month for automating reporting workflows,
+                                        achieving 40% effort reduction</li>
+                                    <li>Mentored Graduate Engineer Trainees (GETs), contributing to skill development
+                                        and project resource allocation</li>
                                 </ul>
                             </div>
                         </div>
@@ -1287,32 +1441,36 @@
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="container">
-            <h2 class="section-title">Let's Connect</h2>
+            <h2 class="section-title"><i class="fas fa-paper-plane me-3"></i>Let's Connect</h2>
             <p class="section-subtitle">Ready to transform your data into actionable insights?</p>
-            
+
             <div class="contact-form">
                 <form id="contactForm" action="https://formspree.io/f/xanbdznk" method="POST">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="mb-3">
                                 <label for="name" class="form-label">Name</label>
-                                <input type="text" class="form-control" id="name" name="name" placeholder="Your name" required>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Your name"
+                                    required>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email" name="email" placeholder="your.email@example.com" required>
+                                <input type="email" class="form-control" id="email" name="email"
+                                    placeholder="your.email@example.com" required>
                             </div>
                         </div>
                     </div>
                     <div class="mb-3">
                         <label for="subject" class="form-label">Subject</label>
-                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Project inquiry" required>
+                        <input type="text" class="form-control" id="subject" name="subject"
+                            placeholder="Project inquiry" required>
                     </div>
                     <div class="mb-3">
                         <label for="message" class="form-label">Message</label>
-                        <textarea class="form-control" id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                        <textarea class="form-control" id="message" name="message" rows="5"
+                            placeholder="Tell me about your project..." required></textarea>
                     </div>
                     <div class="text-center">
                         <button type="submit" class="btn btn-primary btn-lg">
@@ -1331,8 +1489,10 @@
             <h5 class="mb-3">Sarveshh Arora</h5>
             <p class="mb-3">Data Analyst & Visualization Expert</p>
             <div class="social-links">
-                <a href="https://www.linkedin.com/sarveshharora" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/SarveshhArora" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/sarveshharora" class="social-link" target="_blank"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/SarveshhArora" class="social-link" target="_blank"><i
+                        class="fab fa-github"></i></a>
                 <a href="mailto:sarveshharora@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
                 <a href="https://wa.me/919773608133" class="social-link"><i class="fab fa-whatsapp"></i></a>
             </div>
@@ -1357,11 +1517,11 @@
 
         // Portfolio filtering
         document.querySelectorAll('[data-filter]').forEach(button => {
-            button.addEventListener('click', function() {
+            button.addEventListener('click', function () {
                 const filter = this.getAttribute('data-filter');
                 document.querySelectorAll('[data-filter]').forEach(btn => btn.classList.remove('active'));
                 this.classList.add('active');
-                
+
                 document.querySelectorAll('[data-category]').forEach(project => {
                     if (filter === 'all' || project.getAttribute('data-category') === filter) {
                         project.style.display = 'block';
@@ -1374,18 +1534,18 @@
         });
 
         // Contact form
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
             e.preventDefault();
             const submitBtn = this.querySelector('button[type="submit"]');
             const originalText = submitBtn.innerHTML;
             const messageDiv = document.getElementById('formMessage');
-            
+
             submitBtn.innerHTML = '<span class="loading"></span> Sending...';
             submitBtn.disabled = true;
-            
+
             // Get form data
             const formData = new FormData(this);
-            
+
             // Submit to Formspree
             fetch(this.action, {
                 method: 'POST',
@@ -1394,30 +1554,30 @@
                     'Accept': 'application/json'
                 }
             })
-            .then(response => {
-                if (response.ok) {
-                    messageDiv.innerHTML = '<div class="alert alert-success"><i class="fas fa-check-circle me-2"></i>Message sent successfully! I\'ll get back to you soon.</div>';
-                    this.reset();
-                } else {
-                    throw new Error('Network response was not ok');
-                }
-            })
-            .catch(error => {
-                messageDiv.innerHTML = '<div class="alert alert-danger"><i class="fas fa-exclamation-circle me-2"></i>Sorry, there was an error sending your message. Please try again or contact me directly.</div>';
-                console.error('Error:', error);
-            })
-            .finally(() => {
-                submitBtn.innerHTML = originalText;
-                submitBtn.disabled = false;
-                setTimeout(() => messageDiv.innerHTML = '', 5000);
-            });
+                .then(response => {
+                    if (response.ok) {
+                        messageDiv.innerHTML = '<div class="alert alert-success"><i class="fas fa-check-circle me-2"></i>Message sent successfully! I\'ll get back to you soon.</div>';
+                        this.reset();
+                    } else {
+                        throw new Error('Network response was not ok');
+                    }
+                })
+                .catch(error => {
+                    messageDiv.innerHTML = '<div class="alert alert-danger"><i class="fas fa-exclamation-circle me-2"></i>Sorry, there was an error sending your message. Please try again or contact me directly.</div>';
+                    console.error('Error:', error);
+                })
+                .finally(() => {
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                    setTimeout(() => messageDiv.innerHTML = '', 5000);
+                });
         });
 
         // Project view function
         function viewProject(type) {
             const messageDiv = document.getElementById('formMessage');
             messageDiv.innerHTML = `<div class="alert alert-info"><i class="fas fa-spinner fa-spin me-2"></i>Opening ${type} Dashboard...</div>`;
-            
+
             // Redirect to actual dashboard pages
             setTimeout(() => {
                 if (type === 'tableau') {
@@ -1444,4 +1604,5 @@
         });
     </script>
 </body>
-</html> 
+
+</html>
