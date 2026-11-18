@@ -936,6 +936,96 @@
             color: var(--error);
             border: 1px solid rgba(239, 68, 68, 0.3);
         }
+        /* Hero visual */
+        .hero-visual {
+            position: relative;
+            width: 100%;
+            max-width: 460px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .dash-card {
+            background: var(--glass);
+            border: 1px solid var(--glass-light);
+            border-radius: 16px;
+            padding: 18px;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 20px 60px rgba(14, 165, 233, 0.15);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .dash-top { display: flex; align-items: center; gap: 6px; margin-bottom: 14px; }
+        .dash-top i { width: 10px; height: 10px; border-radius: 50%; background: rgba(255, 255, 255, 0.25); }
+        .dash-top small { margin-left: 8px; color: var(--gray-400); font-size: 12px; }
+
+        .kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 14px; }
+        .kpi { background: var(--glass); border-radius: 10px; padding: 10px; }
+        .kpi small { display: block; color: var(--gray-400); font-size: 11px; }
+        .kpi b { display: block; color: var(--white); font-size: 20px; margin: 2px 0; }
+        .kpi em { font-style: normal; color: var(--success); font-size: 11px; }
+
+        .dash-card .chart { width: 100%; height: 150px; }
+        .dash-card .line {
+            fill: none; stroke: var(--primary); stroke-width: 3; stroke-linecap: round;
+            stroke-dasharray: 700; stroke-dashoffset: 700;
+            animation: draw 2.2s 0.3s ease forwards;
+        }
+        .dash-card .area { opacity: 0; animation: fade 1s 1.6s forwards; }
+
+        .bars { display: flex; align-items: flex-end; gap: 8px; height: 60px; margin-top: 10px; }
+        .bars span {
+            flex: 1; height: 0;
+            background: linear-gradient(#38bdf8, var(--primary));
+            border-radius: 4px 4px 0 0;
+            animation: grow 0.9s ease forwards;
+            animation-delay: calc(0.15s * var(--i, 1));
+        }
+
+                .chip {
+            position: absolute;
+            z-index: 3;
+            padding: 6px 14px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 500;
+            white-space: nowrap;
+            color: var(--white);
+            background: #0c2a44;
+            border: 1px solid rgba(14, 165, 233, 0.6);
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+            animation: float 5s ease-in-out infinite;
+        }
+        .c1 { top: -30px; right: 8%; }
+        .c2 { top: 56%; left: -34px; animation-delay: 0.8s; }
+        .c3 { bottom: -30px; left: 14%; animation-delay: 1.6s; }
+        .c4 { top: 70%; right: -30px; animation-delay: 2.4s; }
+        .c5 { top: -30px; left: 8%; animation-delay: 3.2s; }
+        .dash-tabs { display: flex; gap: 6px; margin-bottom: 12px; }
+        .dash-tab {
+            background: transparent;
+            border: 1px solid var(--glass-light);
+            color: var(--gray-400);
+            font-size: 12px;
+            padding: 4px 12px;
+            border-radius: 999px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .dash-tab.active { background: var(--primary); border-color: var(--primary); color: var(--white); }
+        .kpi em.down { color: var(--error); }
+        @keyframes draw { to { stroke-dashoffset: 0; } }
+        @keyframes fade { to { opacity: 1; } }
+        @keyframes grow { to { height: var(--h); } }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+
+        @media (prefers-reduced-motion: reduce) {
+            .dash-card, .chip { animation: none; }
+            .dash-card .line { animation: none; stroke-dashoffset: 0; }
+            .dash-card .area { animation: none; opacity: 1; }
+            .bars span { animation: none; height: var(--h); }
+        }
+       
     </style>
 </head>
 
@@ -998,12 +1088,37 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-6 text-center">
-                    <div class="hero-visual">
-                        <i class="fas fa-chart-network"
-                            style="font-size: 12rem; color: var(--primary); opacity: 0.1;"></i>
-                    </div>
-                </div>
+                <div class="col-lg-6 d-none d-lg-block">
+    <div class="hero-visual">
+        <div class="dash-card">
+            <div class="dash-top">
+                <i></i><i></i><i></i><small>Sample analytics dashboard</small>
+            </div>
+
+            <div class="dash-tabs" id="dashTabs"></div>
+            <div class="kpis" id="dashKpis"></div>
+
+            <svg class="chart" viewBox="0 0 400 150" preserveAspectRatio="none">
+                <defs>
+                    <linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0" stop-color="#0ea5e9" stop-opacity=".35" />
+                        <stop offset="1" stop-color="#0ea5e9" stop-opacity="0" />
+                    </linearGradient>
+                </defs>
+                <path class="area" id="dashArea" fill="url(#areaFill)" d="" />
+                <path class="line" id="dashLine" d="" />
+            </svg>
+
+            <div class="bars" id="dashBars"></div>
+        </div>
+
+        <span class="chip c1">Power BI</span>
+        <span class="chip c2">Tableau</span>
+        <span class="chip c3">SQL</span>
+        <span class="chip c4">Python</span>
+        <span class="chip c5">Excel</span>
+    </div>
+</div>
             </div>
         </div>
     </section>
@@ -1526,7 +1641,7 @@
             <h5 class="mb-3">Sarveshh Arora</h5>
             <p class="mb-3">Data Analyst & Visualization Expert</p>
             <div class="social-links">
-                <a href="https://www.linkedin.com/sarveshharora" class="social-link" target="_blank"><i
+                <a href="https://www.linkedin.com/in/sarveshharora" class="social-link" target="_blank"><i
                         class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/SarveshhArora" class="social-link" target="_blank"><i
                         class="fab fa-github"></i></a>
@@ -1639,6 +1754,88 @@
         document.querySelectorAll('.skill-category, .project-card, .about-image, .stat-card').forEach(el => {
             observer.observe(el);
         });
+              // Hero dashboard: rotating sample views
+        const dashViews = {
+            Finance: {
+                kpis: [['Revenue', 128, 'K', '▲ 12%', true], ['Collections', 86, '%', '▲ 5%', true], ['Variance', 4, '%', '▼ 2%', true]],
+                line: [115, 95, 105, 68, 78, 44, 54, 24, 32],
+                bars: [40, 65, 50, 80, 60, 90, 72]
+            },
+            Sales: {
+                kpis: [['Sales', 2.4, 'M', '▲ 9%', true], ['Profit', 18, '%', '▲ 3%', true], ['Customers', 1.2, 'K', '▲ 7%', true]],
+                line: [100, 88, 96, 80, 60, 66, 40, 48, 30],
+                bars: [55, 45, 70, 62, 85, 78, 92]
+            },
+            Hiring: {
+                kpis: [['Time-to-fill', 32, ' days', '▼ 8%', true], ['Pipeline', 140, '', '▲ 11%', true], ['Offer rate', 24, '%', '▼ 2%', false]],
+                line: [30, 52, 46, 70, 62, 90, 80, 100, 92],
+                bars: [90, 78, 66, 58, 48, 40, 30]
+            }
+        };
+
+        const dashNames = Object.keys(dashViews);
+        let dashIndex = 0, dashTimer;
+
+        function countUp(el, end) {
+            const decimals = Number.isInteger(end) ? 0 : 1;
+            const steps = 30;
+            let i = 0;
+            const t = setInterval(() => {
+                i++;
+                el.textContent = (end * i / steps).toFixed(decimals);
+                if (i >= steps) clearInterval(t);
+            }, 25);
+        }
+
+        function restartAnim(el) {
+            el.style.animation = 'none';
+            el.getBoundingClientRect();
+            el.style.animation = '';
+        }
+
+        function renderDash(name) {
+            const v = dashViews[name];
+
+            document.querySelectorAll('.dash-tab').forEach(b =>
+                b.classList.toggle('active', b.dataset.view === name));
+
+            document.getElementById('dashKpis').innerHTML = v.kpis.map(k => `
+                <div class="kpi"><small>${k[0]}</small>
+                <b><span data-end="${k[1]}">0</span>${k[2]}</b>
+                <em class="${k[4] ? '' : 'down'}">${k[3]}</em></div>`).join('');
+            document.querySelectorAll('#dashKpis [data-end]').forEach(el => countUp(el, +el.dataset.end));
+
+            const pts = v.line.map((y, i) => `${i * 50},${y}`);
+            const line = document.getElementById('dashLine');
+            const area = document.getElementById('dashArea');
+            line.setAttribute('d', 'M' + pts.join(' L'));
+            area.setAttribute('d', 'M' + pts.join(' L') + ' L400,150 L0,150Z');
+            restartAnim(line);
+            restartAnim(area);
+
+            document.getElementById('dashBars').innerHTML =
+                v.bars.map((h, i) => `<span style="--h:${h}%;--i:${i + 1}"></span>`).join('');
+        }
+
+        function startDashTimer() {
+            clearInterval(dashTimer);
+            dashTimer = setInterval(() => {
+                dashIndex = (dashIndex + 1) % dashNames.length;
+                renderDash(dashNames[dashIndex]);
+            }, 6000);
+        }
+
+        document.getElementById('dashTabs').innerHTML = dashNames.map(n =>
+            `<button class="dash-tab" data-view="${n}">${n}</button>`).join('');
+
+        document.querySelectorAll('.dash-tab').forEach(b => b.addEventListener('click', () => {
+            dashIndex = dashNames.indexOf(b.dataset.view);
+            renderDash(b.dataset.view);
+            startDashTimer();
+        }));
+
+        renderDash(dashNames[0]);
+        startDashTimer();
     </script>
 </body>
 
