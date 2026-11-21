@@ -1025,7 +1025,23 @@
             .dash-card .area { animation: none; opacity: 1; }
             .bars span { animation: none; height: var(--h); }
         }
-       
+       /* Rotating role */
+        .hero .role {
+            display: block;
+            font-size: 0.75em;
+            min-height: 1.2em;
+            white-space: nowrap;
+        }
+        .hero .cursor {
+            display: inline-block;
+            width: 3px;
+            height: 0.85em;
+            margin-left: 6px;
+            background: var(--primary);
+            vertical-align: -0.05em;
+            animation: blink 1s steps(1) infinite;
+        }
+        @keyframes blink { 50% { opacity: 0; } }
     </style>
 </head>
 
@@ -1075,7 +1091,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 hero-content fade-in-up">
-                    <h1>Hi! I'm <span class="highlight">Sarveshh Arora</span><br>Data Analyst</h1>
+                <h1>Hi! I'm <span class="highlight">Sarveshh Arora</span><span class="role"><span id="roleText">Sr. Data Analyst</span><span class="cursor"></span></span></h1>
                     <p style="text-align: justify;">Passionate data analyst with expertise in Tableau, Power BI, SQL, Python and Excel. Transforming complex
                         datasets into actionable insights through compelling visualizations that drive business
                         decisions.</p>
@@ -1836,6 +1852,34 @@
 
         renderDash(dashNames[0]);
         startDashTimer();
+        // Hero rotating role
+(function () {
+    const roles = ['Sr. Data Analyst', 'BI Analyst', 'Revenue Analyst', 'Finance Analyst'];
+    const el = document.getElementById('roleText');
+    if (!el) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    let r = 0, c = roles[0].length, deleting = true;
+
+    function tick() {
+        const word = roles[r];
+        c += deleting ? -1 : 1;
+        el.textContent = word.substring(0, c);
+
+        let delay = deleting ? 50 : 90;
+        if (!deleting && c === word.length) {
+            delay = 1800;            // pause on the full title
+            deleting = true;
+        } else if (deleting && c === 0) {
+            deleting = false;
+            r = (r + 1) % roles.length;
+            delay = 300;
+        }
+        setTimeout(tick, delay);
+    }
+
+    setTimeout(tick, 2000);          // show "Data Analyst" first, then start rotating
+})();
     </script>
 </body>
 
